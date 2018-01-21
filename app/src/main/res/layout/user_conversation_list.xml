@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.shubh.androidchatter.Activity.UserChatActivity">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appBarLayout">
+
+        <include
+            android:id="@+id/appbar_user"
+            layout="@layout/app_bar_conversation" />
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_send_black_24dp"
+        android:id="@+id/fab"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:fabSize="normal" />
+    <TextView
+        android:id="@+id/tv_frndStatus"
+        android:layout_below="@+id/appBarLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pending" />
+
+    <android.support.v7.widget.RecyclerView
+        android:background="@drawable/backpic"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/rcFragemnet_UserConversation"
+        android:layout_above="@+id/til"
+       android:layout_below="@id/tv_frndStatus"
+        android:layout_alignParentStart="true">
+    </android.support.v7.widget.RecyclerView>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/fab"
+        android:id="@+id/til"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Input"
+            android:id="@+id/input"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+</RelativeLayout>

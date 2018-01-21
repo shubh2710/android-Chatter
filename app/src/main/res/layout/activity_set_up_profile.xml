@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.shubh.androidchatter.Activity.SetUpProfileActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            android:id="@+id/appbar"
+            layout="@layout/app_bar" />
+    </android.support.design.widget.AppBarLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/framLayout"
+        android:layout_width="200dp"
+        android:layout_marginTop="61dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+        <ProgressBar
+            android:id="@+id/Pb_progressbar"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/iv_SetUpProfilePic"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF000000"/>
+    </FrameLayout>
+
+    <ImageButton
+        android:id="@+id/iv_SetUpProfilePicButton"
+        app:srcCompat="@drawable/ic_camera_alt_black_24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:tint="@color/colorAccent"
+        android:layout_below="@+id/framLayout"
+        android:layout_centerHorizontal="true" />
+
+<TextView
+    android:layout_below="@+id/iv_SetUpProfilePicButton"
+    android:layout_width="wrap_content"
+    android:text="Status :"
+    android:textSize="30dp"
+    android:id="@+id/textview"
+    android:layout_height="wrap_content" />
+    <EditText
+        android:layout_marginTop="10dp"
+        android:id="@+id/et_status"
+        android:layout_below="@+id/textview"
+        android:layout_width="match_parent"
+        android:hint="Hello Chatter"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/b_save"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/et_status"
+        android:layout_margin="15dp"
+        android:background="@color/colorPrimary"
+        android:text="Save" />
+
+</RelativeLayout>
+    </android.support.design.widget.CoordinatorLayout>
